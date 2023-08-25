@@ -1,0 +1,59 @@
+.row
+	.col.s12(style="text-align:center;")
+		.input-field.col.s12
+			select#botype
+				option(value='', disabled='', selected='') Choose your option
+				option(value=null) None
+				option(value='Mirage') Mirage
+				option(value='Inferno') Inferno
+				option(value='Anubis') Anubis
+				option(value='Overpass') Overpass
+				option(value='Nuke') Nuke
+				option(value='Vertigo') Vertigo
+				option(value='Ancient') Ancient
+			label Выбор карты
+			.col.s12(style="text-align:center;")
+		.input-field.col.s12
+			select#team_map.icons
+				option(value=null) NONE
+				option(value='auto', selected) Try to match team automatically
+			label Выбор команды
+	.col.s12(style="text-align:center;")
+		.col.s12.m6
+			.row
+				h3 Team 1
+				.input-field.col.s12
+					select#team_1_score
+						option(value='0', selected) 0
+						option(value='1') 1
+						option(value='2') 2
+						option(value='3') 3
+					label Не трогать
+			.row
+				.input-field.col.s12
+					select#team_1.icons
+						option(value=null) NONE
+						option(value='auto', selected) Try to match team automatically
+					label Команда 1
+		.col.s12.m6
+			.row
+				h3 Team 2
+				.input-field.col.s12
+					select#team_2_score
+						option(value='0', selected) 0
+						option(value='1') 1
+						option(value='2') 2
+						option(value='3') 3
+					label Не трогать
+			.row
+				.input-field.col.s12
+					select#team_2.icons
+						option(value=null) NONE
+						option(value='auto', selected) Try to match team automatically
+					label Команда 2
+		.input-field.col.s12
+			.row
+				a.waves-effect.waves-light.btn#set Применить
+				a.waves-effect.waves-light.btn#swap Перенос сторон
+			.row
+				a.waves-effect.waves-light.btn#ref Обновить HUD

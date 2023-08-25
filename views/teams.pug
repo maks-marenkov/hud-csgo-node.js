@@ -1,0 +1,31 @@
+.row
+		form(enctype="multipart/form-data").col.s12
+			.row
+				.input-field.col.s12.m12
+					select#teams
+						option(value='default', selected='') Новая команда
+				.input-field.col.s12.m6
+					input#team_name.validate(placeholder='Team Name', type='text', name="team_name")
+					input#id(type='hidden', name="_id")
+					label(for='team_name') Название команды
+				.input-field.col.s12.m6
+					.file-field.input-field
+						.btn
+							span Файл лого
+							input#logo(type='file', name='logo')
+						.file-path-wrapper
+							input.file-path.validate(type='text')
+				.input-field.col.s12.m6
+					.col.s12.m6
+						.card-panel.grey.lighten-5.z-depth-1
+							.row
+								.col.s12
+									img.responsive-img#logo_img(alt='')
+									// notice the "circle" class
+							.row
+								.col.s12
+									span.black-text
+										a.waves-effect.waves-light.btn#delete_logo Удалить лого
+				.input-field.col.s12
+					a.waves-effect.waves-light.btn#save_team Сохранить команду
+					a.waves-effect.waves-light.btn.disabled#delete_team Delete team
